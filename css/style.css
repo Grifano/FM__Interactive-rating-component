@@ -139,39 +139,46 @@ html {
 
 body {
   background-color: #fafafa;
+  font-family: "Overpass", sans-serif;
+  height: 100vh;
+}
+
+body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Overpass", sans-serif;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 .attribution {
   color: #e6e6e6;
   font-size: 11px;
   text-align: center;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 1;
 }
 
 .attribution__text {
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .attribution__text a {
   color: white;
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+  text-decoration: none;
 }
 
 .attribution__text a:hover {
@@ -181,7 +188,7 @@ body {
 .grifano-logo {
   display: inline-block;
   border-radius: 2px;
-  padding: 4px;
+  padding: 4px 4px 2px 4px;
   color: white;
   background-color: #0061cc;
 }
@@ -198,80 +205,13 @@ body {
 }
 
 @media (max-width: 955px) {
-  .container--tablet {
+  .container .container--tablet {
     max-width: 623px;
   }
 }
 
 @media (max-width: 425px) {
-  .container--tablet {
+  .container .container--tablet {
     max-width: none;
-  }
-}
-
-.footer {
-  padding: 116px 0px 74px;
-  position: relative;
-}
-
-.footer__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  z-index: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0px 0px 30px 0px;
-}
-
-@media (max-width: 955px) {
-  .footer__row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-height: 100%;
-  }
-}
-
-.footer__heading {
-  max-width: 350px;
-  font-size: 40px;
-  line-height: 1.1;
-  color: #fafafa;
-  text-align: left;
-}
-
-@media (max-width: 955px) {
-  .footer__heading {
-    font-size: 32px;
-    text-align: center;
-    margin: 0px 0px 25px 0px;
-  }
-}
-
-.footer__text {
-  max-width: 350px;
-  color: #fafafa;
-  text-align: left;
-  opacity: 0.8;
-}
-
-@media (max-width: 955px) {
-  .footer__text {
-    max-width: none;
-    text-align: center;
-    margin: 0px 0px 30px 0px;
-  }
-}
-
-@media (max-width: 955px) {
-  .footer {
-    padding: 92px 0px 32px;
   }
 }
