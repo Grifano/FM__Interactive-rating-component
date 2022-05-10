@@ -138,9 +138,11 @@ html {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #121417;
   font-family: "Overpass", sans-serif;
   height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body main {
@@ -214,4 +216,111 @@ body main {
   .container .container--tablet {
     max-width: none;
   }
+}
+
+.rating {
+  padding: 32px;
+  max-width: 348px;
+  max-height: 352px;
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+  border-radius: 30px;
+}
+
+.rating__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #252d37;
+  margin-bottom: 30px;
+}
+
+.rating__icon img {
+  max-width: 100%;
+  display: block;
+}
+
+.rating h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 35px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.rating p {
+  font-size: 1rem;
+  line-height: 24px;
+  color: #959eac;
+  margin-bottom: 24px;
+}
+
+.rating form ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 51px;
+  height: 50px;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  background-color: #252d37;
+  border-radius: 50%;
+  color: #7c8798;
+  padding-top: 1px;
+}
+
+.rating button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 2px;
+  padding: 12px 24px;
+  width: 100%;
+  background: #fb7413;
+  border-radius: 22.5px;
+  color: white;
+  text-transform: uppercase;
+  outline: none;
+  border-style: none;
 }
