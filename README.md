@@ -32,10 +32,10 @@ Users should be able to:
 
 ![](./images/ScreenShot.jpg) -->
 
-<!-- ### Links
+### Links
 
- - Solution URL: [Solution]()
-- Live Site URL: [Live]() -->
+- Solution URL: [Solution]()
+- Live Site URL: [Live](https://grifano.github.io/FM__Interactive-rating-component/)
 
 <!-- ## My process
 
