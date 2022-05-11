@@ -2,6 +2,9 @@
 @import "./vars";
 @import "./global";
 
+section {
+  position: relative;
+}
 .rating {
   padding: 32px;
   max-width: 412px - 64px;
@@ -26,20 +29,11 @@
       display: block;
     }
   }
-  h1 {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 35px;
-    color: $white;
-    margin-bottom: 15px;
-  }
-  p {
-    font-size: 1rem;
-    line-height: 24px;
-    color: $lightgrey;
+  &__paragraph {
     margin-bottom: 24px;
   }
   form {
+    position: relative;
     ul {
       list-style: none;
       display: flex;
@@ -49,6 +43,10 @@
   }
   input {
     display: none;
+    &:checked ~ label {
+      color: $white;
+      background-color: $primary;
+    }
   }
   label {
     display: inline-flex;
@@ -65,6 +63,12 @@
     border-radius: 50%;
     color: $mediumgrey;
     padding-top: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: white;
+      background-color: $mediumgrey;
+    }
   }
   button {
     display: flex;
@@ -82,5 +86,96 @@
     text-transform: uppercase;
     outline: none;
     border-style: none;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    &:hover {
+      background-color: $white;
+      color: $primary;
+    }
+  }
+}
+.succes-msg {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  &__icon {
+    margin-top: 13px;
+    margin-bottom: 32px;
+  }
+  &__result {
+    line-height: 32px;
+    margin: auto;
+    max-width: 193px;
+    margin-bottom: 32px;
+    height: 32px;
+    background: #262e38;
+    border-radius: 22.5px;
+    color: $primary;
+  }
+  &__paragraph {
+    display: inline-block;
+    max-width: 340px;
+    margin-bottom: 13px;
+  }
+}
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 35px;
+  color: $white;
+  margin-bottom: 15px;
+}
+.paragraph {
+  font-size: 1rem;
+  line-height: 24px;
+  color: $lightgrey;
+}
+
+// UI Control
+.show {
+  visibility: visible !important;
+  opacity: 100% !important;
+}
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 80%;
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 8px rgba(124, 135, 152, 0.2);
+  transition: all 0.3s ease 0s;
+  &__msg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 19px;
+    padding: 12px 24px;
+    background: $mediumgrey;
+    border-radius: 15px;
+    text-align: center;
+    color: $white;
+    outline: none;
+    border-style: none;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: $mediumgrey transparent transparent transparent;
+    }
   }
 }
