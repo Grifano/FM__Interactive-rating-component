@@ -143,6 +143,7 @@ body {
   height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
 }
 
 body main {
@@ -225,14 +226,16 @@ body main {
 
 section {
   position: relative;
+  padding: 10px;
 }
 
-.rating {
+.modal {
   padding: 32px;
   max-width: 348px;
   max-height: 352px;
   background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
   border-radius: 30px;
+  position: relative;
 }
 
 .rating__icon {
@@ -349,6 +352,8 @@ section {
 }
 
 .succes-msg {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+  border-radius: 30px;
   visibility: hidden;
   opacity: 0;
   position: absolute;

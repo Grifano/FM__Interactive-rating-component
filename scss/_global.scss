@@ -6,6 +6,7 @@ body {
   font-family: $fontFamily;
   height: 100vh;
   box-sizing: border-box;
+  overflow: hidden;
   main {
     display: flex;
     justify-content: center;

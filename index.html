@@ -30,62 +30,64 @@
 
     <main>
       <section>
-        <div class="rating">
-          <div class="rating__icon">
-            <img
-              src="./images/icon-star.svg"
-              alt="Orange star in the middle of circle"
-            />
-          </div>
-          <h1 class="title">How did we do?</h1>
-          <p class="rating__paragraph paragraph">
-            Please let us know how we did with your support request. All
-            feedback is appreciated to help us improve our offering!
-          </p>
-          <form>
-            <div id="tooltip" class="tooltip">
-              <p class="tooltip__msg">
-                Oops, maybe you forgot to pick a number?
-              </p>
+        <div class="modal">
+          <div class="rating">
+            <div class="rating__icon">
+              <img
+                src="./images/icon-star.svg"
+                alt="Orange star in the middle of circle"
+              />
             </div>
-            <ul>
-              <li>
-                <input type="radio" name="rating" id="rating-1" value="1" />
-                <label for="rating-1">1</label>
-              </li>
-              <li>
-                <input type="radio" name="rating" id="rating-2" value="2" />
-                <label for="rating-2">2</label>
-              </li>
-              <li>
-                <input type="radio" name="rating" id="rating-3" value="3" />
-                <label for="rating-3">3</label>
-              </li>
-              <li>
-                <input type="radio" name="rating" id="rating-4" value="4" />
-                <label for="rating-4">4</label>
-              </li>
-              <li>
-                <input type="radio" name="rating" id="rating-5" value="5" />
-                <label for="rating-5">5</label>
-              </li>
-            </ul>
-            <button id="btn-submit" type="submit">submit</button>
-          </form>
-        </div>
-        <div id="msg" class="succes-msg rating">
-          <div class="succes-msg__icon">
-            <img
-              src="./images/illustration-thank-you.svg"
-              alt="Cartoon mobile with credit-card and circle around"
-            />
+            <h1 class="title">How did we do?</h1>
+            <p class="rating__paragraph paragraph">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+            <form>
+              <div id="tooltip" class="tooltip">
+                <p class="tooltip__msg">
+                  Oops, maybe you forgot to pick a number?
+                </p>
+              </div>
+              <ul>
+                <li>
+                  <input type="radio" name="rating" id="rating-1" value="1" />
+                  <label for="rating-1">1</label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" id="rating-2" value="2" />
+                  <label for="rating-2">2</label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" id="rating-3" value="3" />
+                  <label for="rating-3">3</label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" id="rating-4" value="4" />
+                  <label for="rating-4">4</label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" id="rating-5" value="5" />
+                  <label for="rating-5">5</label>
+                </li>
+              </ul>
+              <button id="btn-submit" type="submit">submit</button>
+            </form>
           </div>
-          <p id="result-msg" class="succes-msg__result"></p>
-          <h2 class="title">Thank you!</h2>
-          <p class="paragraph succes-msg__paragraph">
-            We appreciate you taking the time to give a rating. If you ever need
-            more support, don’t hesitate to get in touch!
-          </p>
+          <div id="msg" class="succes-msg">
+            <div class="succes-msg__icon">
+              <img
+                src="./images/illustration-thank-you.svg"
+                alt="Cartoon mobile with credit-card and circle around"
+              />
+            </div>
+            <p id="result-msg" class="succes-msg__result"></p>
+            <h2 class="title">Thank you!</h2>
+            <p class="paragraph succes-msg__paragraph">
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don’t hesitate to get in touch!
+            </p>
+          </div>
         </div>
       </section>
     </main>
