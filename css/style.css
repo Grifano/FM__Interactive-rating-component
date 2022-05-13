@@ -234,12 +234,6 @@ section {
   position: relative;
 }
 
-@media (max-width: 375px) {
-  .modal {
-    padding: 24px;
-  }
-}
-
 .rating__icon {
   display: -webkit-box;
   display: -ms-flexbox;

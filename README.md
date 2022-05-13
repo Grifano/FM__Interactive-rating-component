@@ -6,20 +6,20 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The Challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-    - [My process](#my-process)
-      - [Built with](#built-with)
+    - [My Process](#my-process)
+      - [Build with](#built-with)
       - [What I learned](#what-i-learned)
-      - [Continued development](#continued-development)
-      - [Useful resources](#useful-resources)
+      - [Continued Development](#continued-development)
+      - [Useful Resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
-### The challenge
+### The Challenge
 
 Users should be able to:
 
@@ -37,44 +37,138 @@ Users should be able to:
 - Solution URL: [Solution]()
 - Live Site URL: [Live](https://grifano.github.io/FM__Interactive-rating-component/)
 
-<!-- ## My process
+## My process
 
-### Built with ?
+### Built with
 
 - Semantic HTML5 markup
-- JavaScript
 - CSS custom properties
+- SASS/SCSS
+- JavaScript
 - Flexbox
-- Responsive images
-- Responsive Website -->
+- Responsive Web Design
 
-<!-- ### What I learned
+### What I learned
 
-Using "picture" tag, browser know what image should to load depending on viewport width 😀
+How to create a tooltip. They're needed if we want to hide users if they have missed something or get a mistake.
 
-```html
+![](./images/tooltip.png)
 
-```
-
-I decide to create a custom arrow for tab headers Instead to use a svg. But I was wondering is that very complicated? Off Course a easy way is to use svg as a background image
+I am still interested in how to make this cute little arrow not so aggressive. But, setting up the border-radius isn't a good choice for that :(
+Also, there is amathing tutorial about making rating. We can use label as an visible element, and hide the imput ratio.
 
 ```css
+/* Rating */
+input {
+  display: none;
+  &:checked ~ label {
+    color: $white;
+    background-color: $primary;
+  }
+}
+label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 51px;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  background-color: $darkblue;
+  border-radius: 50%;
+  color: $mediumgrey;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    color: white;
+    background-color: $mediumgrey;
+  }
+  @media (max-width: 375px) {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+    letter-spacing: 0.17px;
+  }
+}
 
+/* Tooltip */
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 80%;
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 8px rgba(124, 135, 152, 0.2);
+  transition: all 0.3s ease 0s;
+  &__msg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 19px;
+    padding: 12px 24px;
+    background: $mediumgrey;
+    border-radius: 15px;
+    text-align: center;
+    color: $white;
+    outline: none;
+    border-style: none;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: $mediumgrey transparent transparent transparent;
+    }
+  }
+}
 ```
 
-And this part is not clearly Understand For me. Why in if condition don't use an equal operator? It supposes if activeTab is true then run a code, but why activeTab Should be "true"?
+How to use forEach method to going through result of querySelectorAll. Add class to element depending of the if statement.
 
 ```js
+const msg = document.getElementById("msg");
+const tooltip = document.getElementById("tooltip");
+const btnSubmit = document.getElementById("btn-submit");
+const ratingValue = document.querySelectorAll("input");
+var resultString = document.getElementById("result-msg");
 
-``` -->
+// Success message control
+btnSubmit.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Display selected rating
+  ratingValue.forEach((element) => {
+    if (element.checked) {
+      msg.classList.add("show");
+      resultString.innerText = `You selected ${element.value} out of 5`;
+    } else {
+      tooltip.classList.add("show");
+    }
+  });
+});
+```
 
 ### Continued development
 
-I'm focusing to improwing my programming skils with HTML&CSS and JavaScript.
+I'm focusing on improving my programming skills with HTML&CSS and JavaScript. My plan is to get comfortable with the basics before I going to dive into the Frontend framework/library like React, Angular, Vue, etc.
+I hope that such amzing tools like [Frontend Mentor](https://www.frontendmentor.io/) and [Uxcel](https://uxcel.com?invite=EE4PBID94EEH) help me with my this.
 
-<!-- ### Useful resources
+### Useful resources
 
-[Resource title](link) -->
+[Frontend Mentor](https://www.frontendmentor.io/) - Get a challenge and try to make them as close to a mockup as you can.  
+[Uxcel](https://uxcel.com?invite=EE4PBID94EEH) - improv UX/UI Design skills, by reading the article and check your new knowledge by passing a quiz.  
+[Create a Star Rating Widget with CSS in 9 Steps](https://medium.com/codex/create-a-star-rating-widget-with-css-in-9-steps-fe323352dba4)
 
 ## Author
 
