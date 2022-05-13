@@ -5,11 +5,12 @@
 section {
   position: relative;
   padding: 10px;
+  @media (max-width: 375px) {
+    padding: 0 24px;
+  }
 }
 .modal {
-  padding: 32px;
-  max-width: 412px - 64px;
-  max-height: 416px - 64px;
+  max-width: 412px;
   background: radial-gradient(
     98.96% 98.96% at 50% 0%,
     #232a34 0%,
@@ -17,6 +18,9 @@ section {
   );
   border-radius: 30px;
   position: relative;
+  @media (max-width: 375px) {
+    padding: 24px;
+  }
 }
 .rating {
   &__icon {
@@ -32,6 +36,15 @@ section {
       max-width: 100%;
       display: block;
     }
+    @media (max-width: 375px) {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 16px;
+      img {
+        width: 13.96px;
+        height: 13.33px;
+      }
+    }
   }
   &__paragraph {
     margin-bottom: 24px;
@@ -43,6 +56,9 @@ section {
       display: flex;
       justify-content: space-between;
       margin-bottom: 32px;
+      @media (max-width: 375px) {
+        margin-bottom: 24px;
+      }
     }
   }
   input {
@@ -57,7 +73,7 @@ section {
     justify-content: center;
     align-items: center;
     width: 51px;
-    height: 50px;
+    height: 51px;
     font-weight: 700;
     line-height: 1;
     font-size: 16px;
@@ -66,12 +82,17 @@ section {
     background-color: $darkblue;
     border-radius: 50%;
     color: $mediumgrey;
-    padding-top: 1px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     &:hover {
       color: white;
       background-color: $mediumgrey;
+    }
+    @media (max-width: 375px) {
+      width: 42px;
+      height: 42px;
+      font-size: 14px;
+      letter-spacing: 0.17px;
     }
   }
   button {
@@ -96,6 +117,9 @@ section {
       background-color: $white;
       color: $primary;
     }
+    @media (max-width: 375px) {
+      margin-bottom: 8px;
+    }
   }
 }
 .succes-msg {
@@ -115,8 +139,20 @@ section {
   text-align: center;
   transition: all 0.3s ease 0s;
   &__icon {
-    margin-top: 45px;
+    display: inline-block;
+    margin-top: 13px;
     margin-bottom: 32px;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    @media (max-width: 375px) {
+      width: 144px;
+      margin-top: 10px;
+      margin-bottom: 24px;
+    }
   }
   &__result {
     line-height: 32px;
@@ -127,11 +163,19 @@ section {
     background: #262e38;
     border-radius: 22.5px;
     color: $primary;
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
   }
   &__paragraph {
     display: inline-block;
     max-width: 340px;
     margin-bottom: 13px;
+    @media (max-width: 375px) {
+      margin-bottom: 0;
+    }
   }
 }
 .title {
@@ -140,11 +184,20 @@ section {
   line-height: 35px;
   color: $white;
   margin-bottom: 15px;
+  @media (max-width: 375px) {
+    font-size: 24px;
+    line-height: 37px;
+    margin-bottom: 10px;
+  }
 }
 .paragraph {
   font-size: 1rem;
   line-height: 24px;
   color: $lightgrey;
+  @media (max-width: 375px) {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 // UI Control

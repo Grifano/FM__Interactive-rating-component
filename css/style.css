@@ -202,20 +202,12 @@ body main {
 }
 
 .container {
-  margin: auto;
-  max-width: 1460px;
-  padding: 0 20px;
+  padding: 32px;
 }
 
-@media (max-width: 955px) {
-  .container .container--tablet {
-    max-width: 623px;
-  }
-}
-
-@media (max-width: 425px) {
-  .container .container--tablet {
-    max-width: none;
+@media (max-width: 375px) {
+  .container {
+    padding: 24px;
   }
 }
 
@@ -229,13 +221,23 @@ section {
   padding: 10px;
 }
 
+@media (max-width: 375px) {
+  section {
+    padding: 0 24px;
+  }
+}
+
 .modal {
-  padding: 32px;
-  max-width: 348px;
-  max-height: 352px;
+  max-width: 412px;
   background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
   border-radius: 30px;
   position: relative;
+}
+
+@media (max-width: 375px) {
+  .modal {
+    padding: 24px;
+  }
 }
 
 .rating__icon {
@@ -260,6 +262,18 @@ section {
   display: block;
 }
 
+@media (max-width: 375px) {
+  .rating__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+  .rating__icon img {
+    width: 13.96px;
+    height: 13.33px;
+  }
+}
+
 .rating__paragraph {
   margin-bottom: 24px;
 }
@@ -277,6 +291,12 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 32px;
+}
+
+@media (max-width: 375px) {
+  .rating form ul {
+    margin-bottom: 24px;
+  }
 }
 
 .rating input {
@@ -299,7 +319,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   width: 51px;
-  height: 50px;
+  height: 51px;
   font-weight: 700;
   line-height: 1;
   font-size: 16px;
@@ -308,7 +328,6 @@ section {
   background-color: #252d37;
   border-radius: 50%;
   color: #7c8798;
-  padding-top: 1px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -317,6 +336,15 @@ section {
 .rating label:hover {
   color: white;
   background-color: #7c8798;
+}
+
+@media (max-width: 375px) {
+  .rating label {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+    letter-spacing: 0.17px;
+  }
 }
 
 .rating button {
@@ -351,6 +379,12 @@ section {
   color: #fb7413;
 }
 
+@media (max-width: 375px) {
+  .rating button {
+    margin-bottom: 8px;
+  }
+}
+
 .succes-msg {
   background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
   border-radius: 30px;
@@ -367,8 +401,25 @@ section {
 }
 
 .succes-msg__icon {
-  margin-top: 45px;
+  display: inline-block;
+  margin-top: 13px;
   margin-bottom: 32px;
+}
+
+.succes-msg__icon img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 375px) {
+  .succes-msg__icon {
+    width: 144px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
 }
 
 .succes-msg__result {
@@ -382,10 +433,24 @@ section {
   color: #fb7413;
 }
 
+@media (max-width: 375px) {
+  .succes-msg__result {
+    font-size: 14px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+}
+
 .succes-msg__paragraph {
   display: inline-block;
   max-width: 340px;
   margin-bottom: 13px;
+}
+
+@media (max-width: 375px) {
+  .succes-msg__paragraph {
+    margin-bottom: 0;
+  }
 }
 
 .title {
@@ -396,10 +461,25 @@ section {
   margin-bottom: 15px;
 }
 
+@media (max-width: 375px) {
+  .title {
+    font-size: 24px;
+    line-height: 37px;
+    margin-bottom: 10px;
+  }
+}
+
 .paragraph {
   font-size: 1rem;
   line-height: 24px;
   color: #959eac;
+}
+
+@media (max-width: 375px) {
+  .paragraph {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .show {

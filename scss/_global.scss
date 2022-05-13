@@ -51,21 +51,11 @@ body {
   }
 }
 
-// Main container setup
+// Container
 .container {
-  margin: auto;
-  max-width: 1460px;
-  padding: 0 20px;
-
-  @media (max-width: 955px) {
-    .container--tablet {
-      max-width: 623px;
-    }
-  }
-  @media (max-width: 425px) {
-    .container--tablet {
-      max-width: none;
-    }
+  padding: 32px;
+  @media (max-width: 375px) {
+    padding: 24px;
   }
 }
 
