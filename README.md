@@ -1,4 +1,4 @@
-# Frontend Mentor - Pod request access landing page solution
+# Frontend Mentor - Interactive rating component
 
 This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI).
 Frontend Mentor challenges help you improve your coding skills by building realistic projects.
@@ -15,7 +15,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
       - [Continued Development](#continued-development)
       - [Useful Resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+<!-- - [Acknowledgments](#acknowledgments) -->
 
 ## Overview
 
@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-web-design-rating-component-using-scss-flex-javascript-BJJWQVhI5)
 - Live Site URL: [Live](https://grifano.github.io/FM__Interactive-rating-component/)
 
 ## My process
